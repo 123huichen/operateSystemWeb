@@ -6,21 +6,10 @@
     <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/importuser'>导入用户</button>
   </div>
 
-  <div class="modal fade bs-example-modal-md" id='managementOrganization' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-        <div class="col-sm-6">
-          <ul id="ztreeDataMO" class="ztree"></ul>
-        </div>      
-      </div>
-    </div>
-  </div>
-
   <div class="">
     <div class="searchCol">
       <button class="btn right" (click) = 'setAuthority()'>导入用户</button>
-      <button class="btn right"  data-toggle="modal" (click)='setManagementOrganization()' data-target="#managementOrganization">设置权限</button>
-      <!-- routerLink = '/indexpage/indexhome/setauthority' -->
+      <button class="btn right" routerLink = '/indexpage/indexhome/setauthority'>设置权限</button>
     </div>
     <div class="power_left col-sm-3">
       <div>

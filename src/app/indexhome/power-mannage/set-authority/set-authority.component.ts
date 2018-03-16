@@ -5,6 +5,7 @@ import { PushService } from '../../../services/PushService';
 import { StorageService } from '../../../services/StorageService';
 
 import { SetPowerComponent } from '../../../public-component/set-power/set-power.component';
+declare var $ : any;
 @Component({
   selector: 'app-set-authority',
   templateUrl: './set-authority.component.html',
@@ -17,8 +18,10 @@ export class SetAuthorityComponent implements OnInit {
   public roleData : any;
   public authData : any;
   public authorityData : any = [];//被选中的人员
-  constructor(private interfaceService : InterfaceService, private pushService : PushService,
-    private storageService : StorageService, private comfacref : ComponentFactoryResolver) { }
+  constructor(private interfaceService : InterfaceService, 
+    private pushService : PushService,
+    private storageService : StorageService, 
+    private comfacref : ComponentFactoryResolver) { }
 
   ngOnInit() {
     this.getUserListData();
@@ -58,7 +61,8 @@ export class SetAuthorityComponent implements OnInit {
   }
 
 
-  setAuthority(){
+  //设置权限操作
+  public setAuthority(){
     for(let i = 0; i < this.userList.length; i++){
       if(this.userList[i].istrue == true){
         this.authorityData.push({"user_id": this.userList[i].u_id});
@@ -78,7 +82,71 @@ export class SetAuthorityComponent implements OnInit {
     this.authComponent.instance.cancel.subscribe((data)=>{
       this.authComponent.destroy();
     });
-    
   }
+  
+  //设置管理组织架构
+  public setManagementOrganization(){
+      let ztreeUrl = Global.SERVICE_ROOT + Global.ORG_CHAT + '?accountUuid='+this.storageService.getValue(Global.USER_ACCOUNTID_KEY);
+      let setting = {
+        view: {
+          selectedMulti: false,
+          showIcon :false
+        },
+        async: {
+          enable: true, 
+          url: ztreeUrl,//通过getTree接口获取树状数据
+          autoParam: ['orgUuid'],
+          type : 'get',
+          //dataFilter: ajaxDataFilter
+        },
+        edit: {
+          enable: true,
+          showRemoveBtn: false,
+          showRenameBtn: false
+        },
+        data: {
+          keep: {
+            parent:true,
+            leaf:true
+          },
+          simpleData: {
+            enable: true,
+            idKey: "orgUuid",
+            pIdKey: "parentId",
+            rootPId: 0
+          },
+          check: {
+            enable: true,
+            chkStyle: "checkbox",
+            chkboxType: { "Y": "p", "N": "s" },
+            chkDisabledInherit: true,
+            nocheckInherit: true,
+          },
+        },
+        callback: {
+          onClick: zTreeOnClick,
+          //onExpand: zTreeOnExpand
+        }
+      };
+      console.log(ztreeUrl);
+      let self = this.interfaceService;
+      let accountUuid = this.storageService.getValue(Global.USER_ACCOUNTID_KEY);//this指向问题
+      //用于捕获节点被点击的事件回调函数
+      function zTreeOnClick(event, treeId, treeNode, clickFlag){
+        var orgUuid = treeNode.orgUuid;
+        console.log("拿到管理组织架构数据");
+      }
+      // this.pushService.staffData$.subscribe((data)=>{
+      //   this.staffData = data;
+      //   console.log(this.staffData);
+      //   for(let i = 0; i < this.staffData.length; i++){
+      //     this.staffData[i].istrue = false;
+      //   }
+      // });
+      
+      let zNodes = [];
+      console.log($('#ztreeDataMO'));
+      $.fn.zTree.init($('#ztreeDataMO'), setting, zNodes);
+    }
 
 }

@@ -20,17 +20,20 @@ export class SetPowerComponent implements OnInit {
 
   }
 
-  sureData(){
+  // 确定数据
+  public sureData(){
     let data = { "role_id" : this.parentId };
     this.sure.emit(data);
   }
-
-  cancelData(){
+  
+  // 取消数据
+  public cancelData(){
     let data = 0;
     this.cancel.emit(data);
   }
 
-  parentChange($event){
+  // 选中权限对应值
+  public parentChange($event){
     console.log($event.target.value);
     this.parentId = this.roleData[$event.target.value].role_id
   }

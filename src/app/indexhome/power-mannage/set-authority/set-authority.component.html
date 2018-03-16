@@ -7,6 +7,7 @@
   </div>
   <div>
       <div class="searchCol">
+          <button class="btn right" data-toggle="modal" (click)='setManagementOrganization()' data-target="#managementOrganization" >按大区设置</button>
           <button class="btn right" (click) = 'setAuthority()'>授权</button>
       </div>
       <div class="datatable">
@@ -32,5 +33,16 @@
         </table>
       </div>
   </div>
+  <!-- 管理组织架构弹框 -->
+  <div class="modal fade bs-example-modal-md" id='managementOrganization' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="col-sm-6">
+          <ul id="ztreeDataMO" class="ztree"></ul>
+        </div>      
+      </div>
+    </div>
+  </div>
+
   <ng-template #setauth></ng-template>
 </div>

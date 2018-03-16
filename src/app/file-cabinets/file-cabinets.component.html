@@ -1,3 +1,46 @@
-<p>
-  这是文件柜页面
-</p>
+<div >
+  <div class="col-sm-3">
+    <a class="pull-right" href="javascript:">上传</a>
+    <ul>
+      <li> 
+        <a href="javascript:">文件列表1</a>  
+      </li>
+      <li> 
+        <a href="javascript:">文件列表1</a>  
+      </li>
+      <li> 
+        <a href="javascript:">文件列表1</a>  
+      </li>
+      <li> 
+        <a href="javascript:">文件列表1</a>  
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-sm-9">
+    <div class="col-sm-12">
+      <div class="form-inline">
+          <label for="exampleInputName2">文件名</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入文件名">
+          <button class="btn">搜索</button>
+          <div class="file-upload-block">
+              <img  [src]="fileUploadImg" alt="">
+              <input type="file" name="" id="" class="pull-right btn line-file">
+          </div>
+          
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <table border="1" class="col-sm-12">
+        <tr item-width="100%">
+          <th class="col-sm-3 text-center">序号</th>
+          <th class="col-sm-3 text-center">名称</th>
+          <th class="col-sm-3 text-center">时间</th>
+          <th class="col-sm-3 text-center">操作</th>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+</div>

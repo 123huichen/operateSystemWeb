@@ -100,11 +100,11 @@ export class Global {
 
     static QUERY_USERDATA : string = 'showUsers'; //获取导入过来的用户
 
-    static FIND_OPERATION : string = 'findOperation';//获取功能模块下增、删、改、查、操作
+    static FIND_OPERATION : string = 'findOperation'; //获取功能模块下增、删、改、查、操作
 
-    static REVISE_AUTHORITY : string = 'reviseAuthority';//设置用户角色
+    static REVISE_AUTHORITY : string = 'reviseAuthority'; //设置用户角色
 
-    static  SET_ROLE_AUTHORITY : string = 'setRoleAuthority';//设置角色功能模块权限
+    static  SET_ROLE_AUTHORITY : string = 'setRoleAuthority'; //设置角色功能模块权限
 
     static ADD_USER_AUTHORITY : string = 'addUsers';
 

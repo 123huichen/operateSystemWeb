@@ -66,7 +66,7 @@ export class ImportUserComponent implements OnInit {
 					idKey: "orgUuid",
 					pIdKey: "parentId",
 					rootPId: 0
-				},
+        },
 			},
 			callback: {
 				onClick: zTreeOnClick,
@@ -96,66 +96,9 @@ export class ImportUserComponent implements OnInit {
     let zNodes = [];
     console.log($('#ztreeData'))
     $.fn.zTree.init($('#ztreeData'), setting, zNodes);
-    $.fn.zTree.init($('#ztreeDataMO'), setting, zNodes);
   }
 
-  //设置管理组织架构
-  setManagementOrganization(){
-    let ztreeUrl = Global.SERVICE_ROOT + Global.ORG_CHAT + '?accountUuid='+this.storageService.getValue(Global.USER_ACCOUNTID_KEY);
-    let setting = {
-			view: {
-				selectedMulti: false,
-				showIcon :false
-			},
-			async: {
-				enable: true, 
-				url: ztreeUrl,//通过getTree接口获取树状数据
-				autoParam: ['orgUuid'],
-        type : 'get',
-        //dataFilter: ajaxDataFilter
-			},
-			edit: {
-				enable: true,
-				showRemoveBtn: false,
-				showRenameBtn: false
-			},
-			data: {
-				keep: {
-					parent:true,
-					leaf:true
-				},
-				simpleData: {
-					enable: true,
-					idKey: "orgUuid",
-					pIdKey: "parentId",
-					rootPId: 0
-				},
-			},
-			callback: {
-				onClick: zTreeOnClick,
-				//onExpand: zTreeOnExpand
-			}
-    };
-    console.log(ztreeUrl);
-    let self = this.interfaceService;
-    let accountUuid = this.storageService.getValue(Global.USER_ACCOUNTID_KEY);//this指向问题
-    //用于捕获节点被点击的事件回调函数
-    function zTreeOnClick(event, treeId, treeNode, clickFlag){
-      var orgUuid = treeNode.orgUuid;
-      console.log("拿到管理组织架构数据");
-    }
-    this.pushService.staffData$.subscribe((data)=>{
-      this.staffData = data;
-      console.log(this.staffData);
-      for(let i = 0; i < this.staffData.length; i++){
-        this.staffData[i].istrue = false;
-      }
-    })
-    
-    let zNodes = [];
-    console.log($('#ztreeDataMO'));
-    $.fn.zTree.init($('#ztreeDataMO'), setting, zNodes);
-  }
+
 
   public setAuthority(){
     for(let i = 0; i < this.staffData.length; i++){
@@ -191,7 +134,8 @@ export class ImportUserComponent implements OnInit {
     
   }
 
-  changeIsTrue(index,$event){
+  //  点击选中
+  public changeIsTrue(index,$event){
     console.log(index)
     console.log($event.target.checked)
     for(let i = 0; i < this.staffData.length; i++){
