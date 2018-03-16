@@ -1,0 +1,57 @@
+<div class="power_bg">
+  <div class="btnGroup">
+    <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/setauthority'>用户管理</button>
+    <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/rolemanage'>角色管理</button>
+    <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/modulemanage'>模块管理</button>
+    <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/importuser'>导入用户</button>
+  </div>
+
+  <div class="modal fade bs-example-modal-md" id='managementOrganization' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="col-sm-6">
+          <ul id="ztreeDataMO" class="ztree"></ul>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  <div class="">
+    <div class="searchCol">
+      <button class="btn right" (click) = 'setAuthority()'>导入用户</button>
+      <button class="btn right"  data-toggle="modal" (click)='setManagementOrganization()' data-target="#managementOrganization">设置权限</button>
+      <!-- routerLink = '/indexpage/indexhome/setauthority' -->
+    </div>
+    <div class="power_left col-sm-3">
+      <div>
+        <ul id="ztreeData" class="ztree">
+        </ul>
+      </div>
+    </div>
+    <div class="power_right col-sm-9">
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>账号</th>
+              <th>名称</th>
+              <th>岗位</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let item of staffData; let i = index'>
+              <td>{{i}}</td>
+              <td>{{item.username}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.jobType}}</td>
+              <td><input type="checkbox" (change) = 'changeIsTrue(i,$event)'></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <ng-template #setauth></ng-template>
+  </div>
+</div>

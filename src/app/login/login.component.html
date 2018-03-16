@@ -1,0 +1,27 @@
+<div class="logo-bg">
+  <div class="main">
+    <p class="center-block logo" style="padding-top: 20px;"><img src="../assets/image/logo.jpg"/></p >
+    <form  id="login" data-toggle="login" class="form-horizontal" role="form" #userForm = 'ngForm' (ngSubmit) = 'onSubmit()'>
+      <div class="form-group">
+        <div class="col-sm-9 form-margin">
+          <input  type="text" name="username" class="form-control" id="user" placeholder="账号" [(ngModel)]='userName' required #name='ngModel'>
+          <div [hidden] = 'name.valid || name.pristine' class="alert alert-danger">必须填写用户名</div>
+        </div>
+      </div> 
+      <!-- <div class="form-group">
+        <div class="input-group" style="width:75%; margin: auto;">
+          <input type="password" name="password" class="form-control" id="pass" placeholder="密码" minlength=""  style="height: 35px; font-size: 12px; line-height: 1.5; padding: 4px 7px; border-radius: 6px;">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <div class="col-sm-9 form-margin">
+          <input type="password" name="password" class="form-control" id="pass" placeholder="密码" [(ngModel)]='passWord' required>
+        </div>
+      </div>
+      <div class="text-center btnpadding">
+          <button (click) = 'goIndexpage()' type="submit" class="btn btn-success btn-bottom" [disabled] = '!userForm.form.valid'>登 录</button>
+          <button type="reset" class="btn btn-bottom">重 置</button>
+      </div>
+    </form>
+  </div>
+</div>

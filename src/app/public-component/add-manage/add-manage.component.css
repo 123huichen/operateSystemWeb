@@ -1,0 +1,29 @@
+.addmanage_bg {
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -200px;
+}
+.form-group::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.alter_footer {
+    width: 260px;
+    margin: 0 auto;
+}
+.alter_btn {
+    width: 120px;
+    height: 36px;
+    border-radius: 5px;
+}
+.btn_parmry {
+    background-color: #2eb6f4;
+    color: #fff;
+}

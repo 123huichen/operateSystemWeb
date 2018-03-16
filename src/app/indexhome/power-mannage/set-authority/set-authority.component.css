@@ -1,0 +1,31 @@
+.power_bg ::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.power_bg {
+    height: 800px;
+    background-color: #fff;
+    padding-top: 20px;
+}
+.right {
+    float: right;
+    margin-right: 20px;
+}
+.searchCol ::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.datatable  {
+    /* min-height: 772px; */
+    margin-top: 30px;
+    padding: 0 40px;
+}
+.btnGroup {
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.btnGroup button {
+    margin-right: 10px;
+}

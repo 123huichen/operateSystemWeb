@@ -1,0 +1,14 @@
+.lonManageBg {
+    background-color: #fff;
+    min-height: 800px;
+    padding-top: 30px;
+}
+.tableData {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+.searchBox::after {
+    content: "";
+    display: table;
+    clear: both;
+}

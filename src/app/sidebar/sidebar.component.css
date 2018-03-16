@@ -1,0 +1,69 @@
+.sidebar-bg{
+    background-color: #404040;
+    color: #fff;
+    padding-top: 32px;
+    height: 100%;
+    min-height: 1080px;
+}
+.operate{
+
+}
+.operate-title > h2{
+    font-size: 18px;
+    margin-bottom: 27px;
+}
+
+.operate-information > .people-information > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.people-information{
+    color: #5bb5ef;
+    font-size: 14px;
+}
+.operate-achievement > p{
+    font-size: 14px;
+    color: #bababa;
+}
+.mouthtask, .remind{
+    margin-left: 15%;
+
+}
+.mouthtask >h2, .remind > h2{
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-top: 30px;
+}
+.mouthtask > .task > p {
+    font-size: 14px;
+    color: #bababa;
+}
+.mouthtask > .task > p > span {
+    float: right;
+    margin-right: 50px;
+    font-size: 12px;
+}
+.task, .remind-list {
+    margin-left: 0%;
+}
+.remind-list > li {
+    margin-bottom: 10px;
+}
+.remind-list > li > a{
+    font-size: 14px;
+    color: #bababa;
+    text-decoration: none;
+}
+.remind-list > li > span{
+    float: right;
+    margin-right: 50px;
+    width: 30px;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 14px;
+}

@@ -1,0 +1,59 @@
+
+.deangColor {
+    color: #c83d2a;
+}
+.primaryFontColor {
+    color: #2eb6f4;
+    margin-right: 40px;
+}
+.btnActive {
+    border-color: #2eb6f4;
+    color: #2eb6f4;
+}
+.btnGroup {
+    padding-left: 40px;
+}
+.btnGroup button {
+    margin-right: 10px;
+}
+.settype{
+    min-height: 700px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+.settype >  button {
+    margin-right: 10px;
+}
+/* .datatable {
+    margin-top: 30px;
+} */
+ .datatable  {
+    /* min-height: 772px; */
+    margin-top: 30px;
+    padding: 0 40px;
+}
+/*
+.datatable > table tr th {
+    text-align: center;
+}
+*/
+.datatable > table tr th:first-child {
+    width: 10%;
+}
+.datatable > table tr th:nth-child(2) {
+    width: 20%;
+}
+.datatable > table tr th:nth-child(3) {
+    width: 50%;
+}
+.datatable > table tr th:nth-child(4) {
+    width: 20%;
+} 
+
+.newManage {
+    border-color: #2eb6f4;
+    color: #fff;
+    background-color: #2eb6f4;
+}

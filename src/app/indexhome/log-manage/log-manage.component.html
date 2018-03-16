@@ -1,0 +1,38 @@
+<div class="lonManageBg">
+  <div class="searchBox">
+    <div class="col-sm-4 ">
+      <input [(ngModel)] = 'fuzzy' name="fuzzyquery" type="text" class="form-control" id="projectName" placeholder="按关键字搜索">
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-default">搜索</button>
+    </div>
+  </div>
+  <div class="tableData">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>操作员</th>
+          <th>操作</th>
+          <th>时间</th>
+          <th>状态</th>
+          <th>信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = 'let item of logManageList; let i = index'>
+          <td>{{i+1}}</td>
+          <td>{{item.userName}}</td>
+          <td>{{item.handle}}</td>
+          <td>{{item.date}}</td>
+          <td>{{item.state}}</td>
+          <td>{{item.comment}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <app-pagination [pageParams]="pageContent" (changeCurPage)="getPageData($event)"></app-pagination>
+    </div>
+  </div>
+ 
+</div>

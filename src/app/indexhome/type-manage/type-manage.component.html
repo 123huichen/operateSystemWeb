@@ -1,0 +1,50 @@
+<div class="settype">
+    <div class="btnGroup">
+      <button type="button" class="btn btn-default" [class.btnActive] = 'nowType == COOPER' (click) = 'QueryCooperationType()'>合作类型管理</button>
+      <button type="button" class="btn btn-default" [class.btnActive] = 'nowType == PROJT' (click) = 'QueryProjectType()'>项目类型管理</button>
+      <button type="button" class="btn btn-default" [class.btnActive] = 'nowType == NEGO' (click) = 'QueryNegotiateType()'>洽谈项目管理</button>
+    </div>
+    <div class="datatable">
+      <table class="table table-striped table-hover">
+        <thead class="text-left">
+          <tr>
+            <th class="text-center">序号</th>
+            <th>标题</th>
+            <th>说明</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody *ngIf = 'nowType == COOPER' class="text-left">
+          <tr *ngFor='let data of cooperationData; let i = index'>
+            <td class="text-center">{{i+1}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.comment}}</td>
+            <td><a class="primaryFontColor" data-toggle="modal" data-target="#editModal" (click) = 'GetIndex(i)'>编辑</a><a class="deangColor" (click) = 'DelCooperationType(data.id,i)'>删除</a></td>
+          </tr>
+        </tbody>
+        <tbody *ngIf = 'nowType == PROJT' class="text-left">
+          <tr *ngFor='let data of projectData; let i = index'>
+            <td class="text-center">{{i+1}}</td>
+            <td>{{data.projectType_name}}</td>
+            <td>{{data.projectType_Comment}}</td>
+            <td><a class="primaryFontColor" data-toggle="modal" data-target="#editModal" (click) = 'GetIndex(i)'>编辑</a><a class="deangColor" (click) = 'DelProjectType(data.projectType_id,i)'>删除</a></td>
+          </tr>
+        </tbody>
+        <tbody *ngIf = 'nowType == NEGO' class="text-left">
+          <tr *ngFor='let data of negoData; let i = index'>
+            <td class="text-center">{{i+1}}</td>
+            <td>{{data.conversationTitle}}</td>
+            <td>{{data.conversationComment}}</td>
+            <td><a class="primaryFontColor" data-toggle="modal" data-target="#editModal" (click) = 'GetIndex(i)'>编辑</a><a class="deangColor" (click) = 'DelNegotiateType(data.conversationId,i)'>删除</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row" >
+      <div class="col-sm-2 col-sm-push-5">
+        <button type="button" data-toggle="modal" data-target="#editModal" (click)='AddManage()' class="btn btn-default newManage">添加管理类型</button>
+      </div>
+    </div>
+    <ng-template #modal></ng-template>
+    <ng-template #del></ng-template> 
+  </div>

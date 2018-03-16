@@ -1,0 +1,18 @@
+<div class="set_auth">
+    <div>
+        <h3>用户授权</h3>
+    </div>
+    <div class="select_auth">
+        <ul class="parent_auth">
+            <li class="parent_auth_sele" *ngFor = 'let list of roleData; let i = index'><input (change) = 'parentChange($event)' type="radio" name = 'selectAuth' value = "{{i}}"><a data-toggle="collapse" data-parent="#accordion" href="#{{i}}">{{list.role_name}}</a>
+                <!-- <ul class="child_auth panel-collapse collapse" id="{{i}}">
+                    <li class="child_auth_sele" *ngFor = 'let item of authData; let i = index'><input (change) = "childChange($event)" type="checkbox" value = "{{i}}">{{item.operate}}</li>
+                </ul> -->
+            </li>
+        </ul>
+    </div>
+    <div class="btnFooter">
+        <button class="btn alter_btn" (click) = 'cancelData()'>取消</button>
+        <button class="btn alter_btn btn_parmry" (click) = 'sureData()'>确认</button>
+    </div>
+</div>

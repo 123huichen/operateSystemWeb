@@ -1,0 +1,36 @@
+.set_auth {
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -175px;
+}
+.select_auth {
+    width: 280px;
+    margin: 0 auto;
+    min-height: 300px;
+}
+.parent_auth_sele {
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* position: relative; */
+}
+
+.child_auth_sele {
+    margin-left: 75px;
+}
+
+.alter_btn {
+    width: 120px;
+    height: 36px;
+    border-radius: 5px;
+}
+.btn_parmry {
+    background-color: #2eb6f4;
+    color: #fff;
+}

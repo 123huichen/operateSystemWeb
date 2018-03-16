@@ -1,0 +1,38 @@
+.del_alter{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.alter_header {
+    text-align: center;
+    margin-bottom: 36px;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.alter_body {
+    text-align: center;
+    margin-bottom: 55px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.alter_footer {
+    width: 260px;
+    margin: 0 auto;
+}
+.alter_btn {
+    width: 120px;
+    height: 36px;
+    border-radius: 5px;
+}
+.btn_parmry {
+    background-color: #2eb6f4;
+    color: #fff;
+}

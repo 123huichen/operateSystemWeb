@@ -1,0 +1,387 @@
+.bg {
+    background-color: #fff;
+    padding-top: 20px;
+}
+
+.expand {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/image/addition.png')  no-repeat center center;
+    margin-top: 18px;
+}
+.merge{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../../assets/image/subtraction.png')  no-repeat center center;
+}
+/* .profectTitle > li {
+    float: left;
+    margin-left: 20px;
+    font-size: 12px;
+    height: 60px;
+    line-height: 60px;
+}
+.borderLine {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+
+.parentDiv > .borderLine:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+.parentDiv > .borderLine:nth-child(even) {
+    background-color: #fff;
+} */
+
+.followUp {
+    width: 100%;
+    
+}
+.showColumn {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 40px;
+    padding-right: 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.bodyColumn {
+    padding: 10px;
+    height: 630px;
+    overflow: auto;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.sendColumn {
+    widows: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.sendColumn > .sendColumnTop { 
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-right: 20px;
+}
+.sendColumn > .sendColumnTop >span{ 
+   margin-left: 40px;
+}
+.sendColumn > .sendColumnBody {
+    height: 200px;
+}
+.toolColumn {
+    position: relative;
+}
+.tool {
+    position: absolute;
+    left: -30px;
+    z-index: 999999;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    width: 100px;
+    border-radius: 6px;
+}
+.tool > li {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.icon-tool{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    margin: 6px 5px 0px 5px;
+}
+.icon-give-up{
+    background:url('../../assets/image/icon/delete.png') no-repeat center center;
+}
+.reimbursement{
+    background:url('../../assets/image/icon/approval.png') no-repeat center center;
+}
+.contract{
+    background:url('../../assets/image/icon/contract.png') no-repeat center center;
+}
+.mail{
+    background:url('../../assets/image/icon/mail.png') no-repeat center center;
+}
+.signature{
+    background:url('../../assets/image/icon/signature.png') no-repeat center center;
+}
+.file-cabinets{
+    background:url('../../assets/image/icon/cabinet.png') no-repeat center center;
+}
+.case{
+    background:url('../../assets/image/icon/case.png') no-repeat center center;
+}
+
+/* 微信气泡 */
+div.speech {
+    padding: 8px;
+    table-layout: fixed;
+    word-break: break-all;
+    position: relative;
+    background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #ececec), color-stop(0.5, #dbdbdb), color-stop(0.9, #dcdcdc), to(#8c8c8c) );
+    border: 1px solid #989898;
+    border-radius: 8px;
+}
+div.speech:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 15px;
+    top: -20px;
+    border: 10px solid;
+    border-color: transparent transparent #989898 transparent;
+}
+div.speech:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ left: 17px;
+ top: -16px;
+ border: 8px solid;
+ border-color: transparent transparent #ffffff transparent;
+}
+div.speech.right {
+ display: inline-block;
+ box-shadow: -2px 2px 5px #CCC;
+ margin-right: 10px;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#e4ffa7), color-stop(0.1, #bced50), color-stop(0.4, #aed943), color-stop(0.8, #a7d143), to(#99BF40) );
+}
+div.speech.right:before {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 9px;
+ bottom: auto;
+ left: auto;
+ right: -10px;
+ border-width: 9px 0 9px 10px;
+ border-color: transparent #989898;
+}
+div.speech.right:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 10px;
+ bottom: auto;
+ left: auto;
+ right: -8px;
+ border-width: 8px 0 8px 9px;
+ border-color: transparent #bced50;
+}
+div .left {
+ display: inline-block;
+ box-shadow: 2px 2px 2px #CCCCCC;
+ margin-left: 10px;
+ position: relative;
+ background: -webkit-gradient( linear, 50% 0%, 50% 100%, from(#ffffff), color-stop(0.1, #eae8e8), color-stop(0.4, #E3E3E3), color-stop(0.8, #DFDFDF), to(#D9D9D9) );
+}
+div .left:before {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 9px;
+ bottom: auto;
+ left: -10px;
+ border-width: 9px 10px 9px 0;
+ border-color: transparent #989898;
+}
+div .left:after {
+ content: '';
+ position: absolute;
+ width: 0;
+ height: 0;
+ top: 10px;
+ bottom: auto;
+ left: -8px;
+ border-width: 8px 9px 8px 0;
+ border-color: transparent #eae8e8;
+}
+.leftimg {
+ float: left;
+ margin-top: 10px;
+}
+.rightimg {
+ float: right;
+ margin-top: 10px;
+}
+.leftd {
+ clear: both;
+ float: left;
+ margin-left: 10px;
+}
+.rightd {
+ clear: both;
+ float: right;
+ margin-right: 10px;
+}
+
+.leftd_h{
+ width: 39px;
+ height: 39px;
+ border-radius: 100%;
+ display: block;
+ float: left;
+ overflow: hidden;
+}
+
+.leftd_h img{
+ display: block;
+ width: 100%;
+ height: auto;
+}
+.rightd_h{
+ width: 39px;
+ height: 39px;
+ border-radius: 100%;
+ display: block;
+ float: right;
+ overflow: hidden;
+}
+
+.rightd_h img{
+ display: block;
+ width: 100%;
+ height: auto;
+}
+
+/*时间轴*/
+.infoTimeline{
+    font-size:12px; 
+    margin:0 auto;
+    text-align:center;
+}
+
+/*发送框*/
+.sendCount {
+    width: 100%;
+    height: 140px;
+    padding: 5px 5px;
+}
+.sendCount:focus {
+    outline: none;
+}
+.sendbtn {
+    width: 100%;
+    height: 57px;
+
+}
+.sendbtn > button {
+    float: right;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 36px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2eb6f4;
+}
+.showFollowUp{
+    display: table-row;
+}
+
+.sendFileBlock{
+    background:#efefef url('../../assets/image/icon/fileBlock.png')  no-repeat center left;
+    width: 140px;
+    height: 88px;
+    cursor: pointer;
+    background-size: 40px;
+    background-position: 16px;
+}
+
+/* 时间提醒结构块*/
+.reminderBlock {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 550px;
+    height: 350px;
+    margin-left: -275px;
+    margin-top: -175px;
+    box-shadow: 0px 0px 15px 1px #888888;   
+}
+.reminder-title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.btnPrimary{
+    background-color: #2eb6f4;
+    color: #fff;
+}
+.btnSize{
+    display: inline-block;
+    width: 70px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.reminderIcon {
+    background: url('../../assets/image/icon/calendar.png')  no-repeat center right;
+    cursor:pointer;
+}
+.sendTimepaddingRight {
+    padding-right: 6px;
+    cursor:pointer;
+}
+.sendTimeMarginBottom {
+    margin-bottom: 15px;
+}
+.sendTimeR{
+    position: relative;
+}
+
+/* 分页样式 */
+.myprojrct-pagination{
+    margin-bottom: 10px;
+}
+.myprojrct-pagination > a{
+    line-height: 34px;
+}
+.sendFile{
+    display: inline-block;
+    width: 27px;
+    height: 60px;
+    background: url('../../assets/image/icon/Sendafile.png')  no-repeat center right;
+    cursor:pointer;
+}
+.sendFile > .inFileBlock{
+    display:inline-block; 
+    width:27px; 
+    opacity:0;
+    cursor:pointer;
+}
+.padding_any {
+    padding: 10px;
+}
+.fontWeight {
+    font-weight:bold;
+}
+.line-block {
+    display: inline-block;
+}
+.p-margin-0{
+    margin: 0 10px 0 0;
+}
+.p-margin-8{
+    margin: 0 0 0 10px;
+}
+.pMargin-0{
+    margin: 0;
+}

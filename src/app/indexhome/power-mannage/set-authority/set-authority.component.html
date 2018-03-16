@@ -1,0 +1,36 @@
+<div class="power_bg">
+  <div class="btnGroup">
+      <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/setauthority'>用户管理</button>
+      <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/rolemanage'>角色管理</button>
+      <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/modulemanage'>模块管理</button>
+      <button type="button" class="btn btn-default" routerLink = '/indexpage/indexhome/importuser'>导入用户</button>
+  </div>
+  <div>
+      <div class="searchCol">
+          <button class="btn right" (click) = 'setAuthority()'>授权</button>
+      </div>
+      <div class="datatable">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>账号</th>
+              <th>名称</th>
+              <th>岗位</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = 'let item of userList; let i = index'>
+              <td>{{i+1}}</td>
+              <td>{{item.username}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.jobType}}</td>
+              <td><input type="checkbox" (change) = 'changeIsTrue(i,$event)'></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <ng-template #setauth></ng-template>
+</div>

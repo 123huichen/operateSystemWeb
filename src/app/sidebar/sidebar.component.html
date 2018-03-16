@@ -1,0 +1,40 @@
+<div class="sidebar-bg">
+  <div class="operate">
+    <div class="operate-title text-center">
+        <h2>彩之云市场运营平台</h2>
+    </div>
+    <div class="operate-information">
+      <div class="people-information text-center">
+        <img [src]="headImage" alt="" class="center-block">
+        <span >{{userName}}</span><br/>
+        <span><a id="{{accountUuid}}" href="javascript:;" (click)="LogOut(this);">注销</a></span>
+      </div>
+    </div>
+    <div class="mouthtask" style="margin-top:20px">
+      <div class="task">
+        <p>本年度市场绩效目标万m</p>
+        <p>已完成目标万m</p>
+        <p>预计提出总额万m</p>
+      </div>
+    </div>
+  </div>
+  <div class="mouthtask">
+    <h2>本月任务：</h2>
+    <div class="task">
+      <p>信息录入条数<span>(0/5)</span></p>
+      <p>新客户拜访<span>(0/5)</span></p>
+      <p>日报提交<span>(0/5)</span></p>
+    </div>
+  </div>
+  <div class="remind">
+    <h2>提醒：</h2>
+    <ul class="remind-list">
+      <li><a href="javascript:;">全部项目</a><span>20</span></li>
+      <li><a href="javascript:;">被关注的项目</a><span>0</span></li>
+      <li><a href="javascript:;">未跟进的项目</a><span>0</span></li>
+      <li><a href="javascript:;">签约等待确认项目</a><span>0</span></li>
+      <li><a href="javascript:;">已签约的项目</a><span>0</span></li>
+      <li><a href="javascript:;">已放弃的项目</a><span>0</span></li>
+    </ul>
+  </div>
+</div>

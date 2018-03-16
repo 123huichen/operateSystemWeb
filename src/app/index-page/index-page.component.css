@@ -1,0 +1,21 @@
+.showview {
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+    padding: 20px 10px 10px 10px;
+}
+.ggg {
+    /* width: 100%; */
+    height: 100%;
+    overflow-x: hidden;
+}
+.container-fluid {
+    padding: 0;
+}
+.floatLeft {
+    float: left;
+}
+.overhide {
+    overflow: hidden;
+    padding-right: 0; 
+}
